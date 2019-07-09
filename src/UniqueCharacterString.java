@@ -1,13 +1,16 @@
 
 public class UniqueCharacterString {
-	public boolean checkString(String s) {
+	public String checkString(String s) {
+		if(s.length() == 0) {
+			return "Empty String";
+		}
 		for(int i=0; i< s.length(); i++) {
 			for(int j= i+1; j<s.length(); j++) {
 				if(s.charAt(i) == s.charAt(j)) {
-					return false;
+					return "No";
 				}
 			}
 		}		
-		return true;
+		return "Yes";
 	}
 }
